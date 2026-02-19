@@ -40,14 +40,21 @@ export default function Home() {
       <section className="max-w-4xl mx-auto px-6 py-20">
         <div className="text-center">
           <h2 className="text-5xl font-bold text-gray-800 mb-4">My Skills:</h2>
-          <div className="grid grid-cols-6 md:grid-cols4 gap-4">
+          <div className="grid grid-cols-6 md:grid-cols-3 gap-4">
             {['Java', 'JavaScript', 'Python', 'C', 'Linux' , 'Git', 'SQL', 'Design Patterns', 'Problem Solving'].map((skill) => (
-              <div
-                key={skill}
-                className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-500 transition"
-              >
-                {skill}
+              // <div
+              //   key={skill}
+              //   className="bg-black-to-white text-white px-6 py-3 rounded-lg hover:bg-gray-500 transition"              >
+              //   {skill}
+              // </div>
+
+              <div key={skill} className="border-solid border-1 border-white relative rounded-lg inline-flex items-center justify-center p-0.5 overflow-hidden text-sm text-heading rounded-base group bg-gradient-to-br from-purple-600 to-blue-500 hover:to-purple-600 hover:from-blue-500 dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+                <span key={skill} className="border-solid relative rounded-lg px-4 py-2.5 transition-all ease-in duration-75 bg-neutral-primary-soft rounded-base hover:bg-transparent hover:dark:bg-transparent leading-5">
+                  {skill}
+                </span>
               </div>
+
+              
             ))}
           </div>
         </div>
