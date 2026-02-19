@@ -3,11 +3,23 @@ import Image from "next/image";
 export default function About() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+      {/* Summary */}
+      <section className="max-w-4xl mx-auto px-6 py-20">
+        <div className="space-y-4 text-gray-700 leading-relaxed">
+          <h2 className="text-5xl font-bold text-gray-800 text-center">Summary:</h2>
+          <p className="text-md text-left text-gray-700 max-w-2xl mx-auto mb-8">
+            Software Engineering graduate with hands-on experience in full-stack development, object-oriented
+            programming, and algorithm implementation. Proven ability to design scalable applications using Java
+            and Python with strong foundation in data structures, RESTful API development, and software testing.
+            Seeking entry-level Software Engineer role to contribute problem-solving skills and technical expertise.
+          </p>
+        </div>
+      </section>
+
       {/* Description */}
       <section className="max-w-4xl mx-auto px-6 py-20">
         <div className="space-y-4 text-gray-700 leading-relaxed">
           <h2 className="text-5xl font-bold text-gray-800 text-center">Get To Know Me:</h2>
-
           <p className="text-md text-left text-gray-700 max-w-2xl mx-auto mb-8">
             I'm a Software Engineering graduate from Arizona State University with a passion
             for building scalable, well-designed applications. My journey into software
