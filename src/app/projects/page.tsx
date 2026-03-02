@@ -13,6 +13,19 @@ const projects = [
         ],
     },
     {
+        title: "Job Board Monitor",
+        description: "A full-stack web application that automatically tracks and aggregates job postings from target companies in real time. Polls the Greenhouse ATS API on a scheduled interval, persists new postings to a PostgreSQL database, and displays them through a clean web interface — only surfacing roles that haven't been seen before.",
+        techStack: ["Java", "Spring Boot 3.5", "Spring Data JPA", "Spring Scheduler", "PostgreSQL", "FLyway", "Thymeleaf", "Maven"],
+        github: "https://github.com/mahicks5/job-monitor",
+        highlights: [
+            "Built a full-stack job monitoring application in Java and Spring Boot that automatically aggregates live postings from target companies via the Greenhouse ATS API",
+            "Implemented a scheduled polling system using Spring Scheduler that syncs new job postings hourly without duplicates, using external ID deduplication backed by PostgreSQL",
+            "Designed a relational data model with Spring Data JPA/Hibernate and managed schema evolution using Flyway database migrations",
+            "Containerized the devlopment database using Docker for a reproducible local environment",
+            "Rendered a dynamic web interface with Thymeleaf templating with a responsive CSS interface",
+        ],
+    },
+    {
         title: "Adaptive Virtual Assistant",
         description: "A web-based virtual assistant that integrates multiple AI APIs to provide personalized responses and adapt to user preferences.",
         techStack: ["Python", "REST APIs"],
@@ -61,9 +74,11 @@ export default function Projects() {
 
                                 <a
                                     href={project.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="inline-flex items-center text-blue-400 font-medium hover:underline">
                                     View on GitHub
-                                    <svg className="w-5 h-5 ms-1 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4" /></svg>
+                                    <svg className="w-5 h-5 ms-1 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4" /></svg>
                                 </a>
 
                             </div>
