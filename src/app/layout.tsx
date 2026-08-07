@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Jersey_10 } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const mono = Inter({
-  subsets: ["latin"],
+const jersey10 = Jersey_10({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-jersey-10',
 });
 
 export const metadata: Metadata = {
@@ -19,14 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <header className="bg-black border-b border-gray-200">
+      <body className={jersey10.className}>
+        <header className="bg-black text-[#00ff41]">
           <nav className="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="/" className="text-xl font-bold">Maxwell Hicks</a>
             <div className="flex gap-6">
-              <a href="/projects" className="hover:text-blue-600 transition">Projects</a>
-              <a href="/about" className="hover:text-blue-600 transition">About</a>
-              <a href="mailto:maxwellahicks@gmail.com" className="hover:text-blue-600 transition">Contact</a>
+              <a href="/projects" className="hover:text-white transition-transform hover:scale-120">Projects</a>
+              <a href="/about" className="hover:text-white transition-transform hover:scale-120">About</a>
+              <a href="mailto:maxwellahicks@gmail.com" className="hover:text-white transition-transform hover:scale-120">Contact</a>
             </div>
           </nav>
         </header>

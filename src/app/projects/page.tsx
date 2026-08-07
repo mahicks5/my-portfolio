@@ -49,13 +49,13 @@ const projects = [
 
 export default function Projects() {
     return (
-        <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+        <main className="min-h-screen bg-black text-[#00ff41]">
             <div className="max-w-4xl mx-auto px-6 py-20">
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <h1 className="text-5xl font-bold text-gray-800 text-center mb-8">Projects:</h1>
-                    <p className="text-xl text-gray-600">
-                        A look at what I've built so far.
+                    <h1 className="text-5xl font-bold text-center mb-8">Projects:</h1>
+                    <p className="text-xl">
+                        Here's a look at what I've built so far.
                     </p>
                 </div>
 
@@ -64,11 +64,11 @@ export default function Projects() {
                     {projects.map((project) => (
                         <div
                             key={project.title}
-                            className="bg-white rounded-lg shadow-sm hover:shadow-md transition p-8"
+                            className="bg-[#31363c] transition p-8"
                         >
                             {/* Project Title and Description */}
                             <div className="flex justify-between items-start mb-4">
-                                <h2 className="text-2xl font-bold text-gray-900">
+                                <h2 className="text-2xl font-bold">
                                     {project.title}
                                 </h2>
 
@@ -76,15 +76,14 @@ export default function Projects() {
                                     href={project.github}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center text-blue-400 font-medium hover:underline">
-                                    View on GitHub
-                                    <svg className="w-5 h-5 ms-1 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4" /></svg>
+                                    className="inline-flex items-center hover:underline">
+                                    View on GitHub --&gt;
                                 </a>
 
                             </div>
 
                             {/* Description */}
-                            <p className="text-gray-600 leading-relaxed mb-6 italic">
+                            <p className="leading-relaxed mb-6 italic">
                                 {project.description}
                             </p>
 
@@ -93,10 +92,10 @@ export default function Projects() {
                                 {project.highlights.map((highlight, index) => (
                                     <li
                                         key={index}
-                                        className="flex items-start gap-2 text-gray-700"
+                                        className="flex items-start gap-2"
                                     >
                                         {/* Custom bullet point */}
-                                        <span className="text-blue-500">
+                                        <span>
                                             ·
                                         </span>
                                         {highlight}
@@ -109,7 +108,7 @@ export default function Projects() {
                                 {project.techStack.map((tech) => (
                                     <span
                                         key={tech}
-                                        className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl rounded-base text-sm px-3 py-1 rounded"
+                                        className="text-sm px-3 py-1 rounded transition-transform hover:scale-120"
                                     >
                                         {tech}
                                     </span>

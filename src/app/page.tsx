@@ -1,18 +1,25 @@
 import Image from "next/image";
 
+const CORE_LANGUAGES = ['Java', 'Python', 'TypeScript', 'JavaScript', 'SQL', 'HTML', 'CSS',];
+const FRAMEWORKS_LIBRARIES = ['Spring Boot', 'Spring Data JPA', 'React', 'REST APIs', 'JUnit',];
+const DATABASES = ['PostgreSQL',];
+const TOOLS_PLATFORMS = ['Git', 'Docker', 'Linux', 'AWS', 'CI/CD',];
+const AI_LLM_INTEGRATION = ['Claude', 'GitHub Copilot', 'LLM API Integration', 'Prompt Engineering',];
+const FUNDAMENTALS = ['Object-Oriented Design', 'Design Patterns', 'Data Structures & Algorithms', 'Agile/Scrum', 'Problem Solving'];
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+    <main className="min-h-screen bg-black text-[#00ff41]">
       {/* Hero Section */}
       <section className="max-w-4xl mx-auto px-6 py-20">
         <div className="text-center">
-          <h1 className="text-5xl font-bold text-gray-800 mb-4">
+          <h1 className="text-5xl font-bold mb-4">
             Hello, I'm Maxwell Hicks.
           </h1>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+          <p className="text-lg max-w-2xl mx-auto mb-8">
             Software Engineer | Arizona State University Graduate
           </p>
-          <p className="text-md text-gray-700 max-w-2xl mx-auto mb-8">
+          <p className="text-md max-w-2xl mx-auto mb-8">
             My focus is build backend services and APIs.
             I have experience with a variety of programming languages and frameworks, and I'm always eager to learn new technologies and improve my skills.
             I enjoy working on challenging projects that allow me to solve complex problems and create innovative solutions!
@@ -24,28 +31,92 @@ export default function Home() {
 
       {/* Skills Section */}
       <section className="max-w-4xl mx-auto px-6 py-20">
-        <div className="text-center">
-          <h2 className="text-5xl font-bold text-gray-800 mb-4">My Skills:</h2>
-          <div className="grid md:grid-cols-3 gap-4">
-            {['Java', 'JavaScript', 'Python', 'C', 'Linux', 'Git', 'SQL', 'Design Patterns', 'Problem Solving'].map((skill) => (
-              <div key={skill} className="border-solid border-1 border-white relative rounded-lg inline-flex items-center justify-center p-0.5 overflow-hidden text-sm text-heading rounded-base group bg-gradient-to-br from-purple-600 to-blue-500 hover:to-purple-600 hover:from-blue-500 dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
-                <span key={skill} className="border-solid relative rounded-lg px-4 py-2.5 transition-all ease-in duration-75 bg-neutral-primary-soft rounded-base hover:bg-transparent hover:dark:bg-transparent leading-5">
-                  {skill}
+        <div className="">
+          <h2 className="text-center text-5xl font-bold mb-4">My Skills:</h2>
+
+          {/* Core Languages */}
+          <h2 className="text-xl font-bold mb-4">Core Languages:</h2>
+          <div className="text-center">
+            {CORE_LANGUAGES.map((item) => (
+              <div key={item} className="inline-flex p-1 text-sm">
+                <span key={item} className="px-4 py-2">
+                  {item}
                 </span>
               </div>
             ))}
           </div>
+
+          {/* Frameworks and Libraries */}
+          <h2 className="text-xl font-bold mb-4">Frameworks and Libraries:</h2>
+          <div className="text-center">
+            {FRAMEWORKS_LIBRARIES.map((item) => (
+              <div key={item} className="relative rounded-lg inline-flex items-center justify-center p-1 text-sm">
+                <span key={item} className="px-4 py-2">
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* Databases */}
+          <h2 className="text-xl font-bold mb-4">Databases:</h2>
+          <div className="text-center">
+            {DATABASES.map((item) => (
+              <div key={item} className="relative rounded-lg inline-flex items-center justify-center p-1 text-sm">
+                <span key={item} className="px-4 py-2">
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* Tools and Platforms */}
+          <h2 className="text-xl font-bold mb-4">Tools and Platforms:</h2>
+          <div className="text-center">
+            {TOOLS_PLATFORMS.map((item) => (
+              <div key={item} className="relative rounded-lg inline-flex items-center justify-center p-1 text-sm">
+                <span key={item} className="px-4 py-2">
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* AI and LLM Integration */}
+          <h2 className="text-xl font-bold mb-4">AI and LLM Integration:</h2>
+          <div className="text-center">
+            {AI_LLM_INTEGRATION.map((item) => (
+              <div key={item} className="relative rounded-lg inline-flex items-center justify-center p-1 text-sm">
+                <span key={item} className="px-4 py-2">
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* Fundamentals */}
+          <h2 className="text-xl font-bold mb-4">Fundamentals:</h2>
+          <div className="text-center">
+            {FUNDAMENTALS.map((item) => (
+              <div key={item} className="relative rounded-lg inline-flex items-center justify-center p-1 text-sm">
+                <span key={item} className="px-4 py-2">
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
 
       {/* Contact Section */}
       <section className="max-w-4xl mx-auto px-6 py-16">
         <div className="text-center">
-          <h2 className="text-5xl font-bold text-gray-800 mb-4">Let's Connect:</h2>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+          <h2 className="text-5xl mb-4">Let's Connect:</h2>
+          <p className="text-lg max-w-2xl mx-auto mb-8">
             I'm always open to new opportunities and collaborations.
           </p>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+          <p className="text-lg max-w-2xl mx-auto mb-8">
             Feel free to reach out to me!
           </p>
 
