@@ -11,6 +11,18 @@ const jersey10 = Jersey_10({
 export const metadata: Metadata = {
   title: "Maxwell Hicks | Software Engineer",
   description: "Personal Webiste of Maxwell Hicks - Software Engineering Graduate",
+  openGraph: {
+    title: "Maxwell — Software Engineer Portfolio",
+    description: "Full-stack projects in Java, Spring Boot, Python, and React/TypeScript.",
+    images: [
+      {
+        url: "https://yourdomain.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Maxwell - Software Engineer Portfolio",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
