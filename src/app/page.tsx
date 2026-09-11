@@ -48,7 +48,7 @@ export default function Home() {
           </span>
           Open to full-time Software Engineering roles
         </div>
-        <p className="text-base text-[#005c16] tracking-widest uppercase mb-4">
+        <p className="text-base text-[#00992a] tracking-widest uppercase mb-4">
           Software Engineer · Backend &amp; Full-Stack
         </p>
         <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-tight mb-6">
@@ -74,7 +74,7 @@ export default function Home() {
         <div className="flex flex-wrap gap-4">
           <Link
             href="/projects"
-            className="px-5 py-2.5 bg-[#00ff41] border border-[#00ff41] text-black! text-base hover:bg-transparent hover:text-[#00ff41]! transition-colors duration-200"
+            className="px-5 py-2.5 bg-[#00ff41] border border-[#00ff41] text-black text-base hover:bg-transparent hover:text-[#00ff41] transition-colors duration-200"
           >
             View My Work
           </Link>
@@ -114,7 +114,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-10">
           {SKILL_GROUPS.map(({ label, items }) => (
             <div key={label}>
-              <p className="text-sm text-[#005c16] tracking-widest uppercase mb-3">
+              <p className="text-sm text-[#00992a] tracking-widest uppercase mb-3">
                 {label}
               </p>
               <div className="flex flex-wrap gap-2">

@@ -4,7 +4,7 @@
   --background: #0a0a0a;
   --foreground: #00ff41;
   --foreground-secondary: #00b32c;
-  --foreground-muted: #005c16;
+  --foreground-muted: #00992a;
   --surface: #111111;
   --surface-elevated: #1a1a1a;
   --border: #003b0f;
@@ -18,54 +18,57 @@
   --color-surface: var(--surface);
   --color-surface-elevated: var(--surface-elevated);
   --color-border: var(--border);
-  --font-sans: var(--font-geist-mono);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-share-tech-mono), monospace;
+  --font-mono: var(--font-share-tech-mono), monospace;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'Geist Mono', 'JetBrains Mono', 'Fira Code', monospace;
-  line-height: 1.7;
-  font-size: 18px;
-}
+/* Base element styles live in a layer so Tailwind utility classes can override them */
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-mono);
+    line-height: 1.7;
+    font-size: 18px;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  color: var(--foreground);
-  letter-spacing: 0.05em;
-  line-height: 1.3;
-}
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--foreground);
+    letter-spacing: 0.05em;
+    line-height: 1.3;
+  }
 
-p {
-  color: var(--foreground-secondary);
-  max-width: 65ch;
-  line-height: 1.8;
-}
+  p {
+    color: var(--foreground-secondary);
+    max-width: 65ch;
+    line-height: 1.8;
+  }
 
-a {
-  color: var(--foreground);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
+  a {
+    color: var(--foreground);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
 
-a:hover {
-  color: var(--foreground-secondary);
-}
+  a:hover {
+    color: var(--foreground-secondary);
+  }
 
-::selection {
-  background: #00ff41;
-  color: #000000;
-}
+  ::selection {
+    background: #00ff41;
+    color: #000000;
+  }
 
-::-webkit-scrollbar {
-  width: 6px;
-}
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
 
-::-webkit-scrollbar-track {
-  background: var(--background);
-}
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
 
-::-webkit-scrollbar-thumb {
-  background: var(--foreground-muted);
-  border-radius: 3px;
+  ::-webkit-scrollbar-thumb {
+    background: var(--foreground-muted);
+    border-radius: 3px;
+  }
 }

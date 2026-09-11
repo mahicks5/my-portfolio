@@ -36,8 +36,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${shareTechMono.variable} font-mono`}>
+    <html lang="en" className={shareTechMono.variable}>
+      <body className="font-mono">
         <header className="bg-black text-[#00ff41]">
           <nav className="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="/" className="text-xl font-bold">Maxwell Hicks</a>
