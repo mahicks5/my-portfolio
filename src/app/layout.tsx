@@ -12,7 +12,7 @@ const shareTechMono = Share_Tech_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://maxwellhicks.dev"),
   title: "Maxwell Hicks | Software Engineer",
-  description: "Personal Webiste of Maxwell Hicks - Software Engineering Graduate",
+  description: "Personal Website of Maxwell Hicks - Software Engineering Graduate",
   openGraph: {
     title: "Maxwell — Software Engineer Portfolio",
     description: "Full-stack projects in Java, Spring Boot, Python, and React/TypeScript.",
