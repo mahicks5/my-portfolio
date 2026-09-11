@@ -1,38 +1,15 @@
-import Image from "next/image";
-
 const projects = [
     {
-        title: "Personal Portfolio Website",
-        description: "A website built using Next.js and Tailwind CSS to showcase my projects, skills, and experience. It features a clean and modern design. (This website!)",
-        techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-        github: "https://github.com/mahicks5/my-portfolio",
-        highlights: [
-            "Implemented a responsive design using Tailwind CSS, ensuring optimal viewing across devices.",
-            "Optimized performance by leveraging Next.js features such as server-side rendering and image optimization.",
-            "Deployed the website on Vercel, enabling seamless updates and continuous deployment.",
-        ],
-    },
-    {
         title: "Job Board Monitor",
-        description: "A full-stack web application that automatically tracks and aggregates job postings from target companies in real time. Polls the Greenhouse ATS API on a scheduled interval, persists new postings to a PostgreSQL database, and displays them through a clean web interface — only surfacing roles that haven't been seen before.",
-        techStack: ["Java", "Spring Boot 3.5", "Spring Data JPA", "Spring Scheduler", "PostgreSQL", "FLyway", "Thymeleaf", "Maven"],
+        description: "A full-stack web application that automatically tracks and aggregates job postings from target companies in real time. Polls the Greenhouse ATS API on a scheduled interval, persists new postings to a PostgreSQL database, and displays them through a clean web interface, only surfacing roles that haven't been seen before.",
+        techStack: ["Java", "Spring Boot 3.5", "Spring Data JPA", "Spring Scheduler", "PostgreSQL", "Flyway", "Thymeleaf", "Maven"],
         github: "https://github.com/mahicks5/job-monitor",
         highlights: [
             "Built a full-stack job monitoring application in Java and Spring Boot that automatically aggregates live postings from target companies via the Greenhouse ATS API",
             "Implemented a scheduled polling system using Spring Scheduler that syncs new job postings hourly without duplicates, using external ID deduplication backed by PostgreSQL",
             "Designed a relational data model with Spring Data JPA/Hibernate and managed schema evolution using Flyway database migrations",
-            "Containerized the devlopment database using Docker for a reproducible local environment",
-            "Rendered a dynamic web interface with Thymeleaf templating with a responsive CSS interface",
-        ],
-    },
-    {
-        title: "Adaptive Virtual Assistant",
-        description: "A web-based virtual assistant that integrates multiple AI APIs to provide personalized responses and adapt to user preferences.",
-        techStack: ["Python", "REST APIs"],
-        github: "https://github.com/mahicks5/group21_adaptivevirtualassistant",
-        highlights: [
-            "Implemented a RESTful API using Flask, allowing users to perform CRUD operations on a database.",
-            "Designed and optimized database schema for efficient data retrieval and storage.",
+            "Containerized the development database using Docker for a reproducible local environment",
+            "Rendered a dynamic web interface with Thymeleaf templating and responsive CSS",
         ],
     },
     {
@@ -41,98 +18,152 @@ const projects = [
         techStack: ["Java", "OOP", "Design Patterns", "JUnit"],
         github: "https://github.com/mahicks5/console-dungeon-game",
         highlights: [
-            "Implemented a RESTful API using Flask, allowing users to perform CRUD operations on a database.",
-            "Designed and optimized database schema for efficient data retrieval and storage.",
+            "Applied the Factory pattern to generate weapons, armor, names, and other game elements, reducing object creation complexity",
+            "Implemented stat upgrades with the Strategy pattern so new upgrade behaviors plug in without changing existing code",
+            "Used the Singleton pattern for management classes and a shared dice class to guarantee a single active instance",
+        ],
+    },
+    {
+        title: "Adaptive Virtual Assistant",
+        description: "A web-based virtual assistant that integrates multiple AI APIs to provide personalized responses and adapt to user preferences.",
+        techStack: ["Python", "REST APIs"],
+        github: "https://github.com/mahicks5/group21_adaptivevirtualassistant",
+        highlights: [
+            "Implemented a RESTful API using Flask, allowing users to perform CRUD operations on a database",
+            "Designed and optimized database schema for efficient data retrieval and storage",
+        ],
+    },
+    {
+        title: "Personal Portfolio Website",
+        description: "A website built using Next.js and Tailwind CSS to showcase my projects, skills, and experience, with a terminal-inspired design. (This website!)",
+        techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+        github: "https://github.com/mahicks5/my-portfolio",
+        highlights: [
+            "Implemented a responsive design using Tailwind CSS, ensuring optimal viewing across devices",
+            "Optimized performance by leveraging Next.js features such as server-side rendering and image optimization",
+            "Deployed the website on Vercel, enabling seamless updates and continuous deployment",
         ],
     },
 ]
 
 export default function Projects() {
     return (
-        <main className="min-h-screen bg-black text-[#00ff41]">
-            <div className="max-w-4xl mx-auto px-6 py-20">
-                {/* Header */}
-                <div className="text-center mb-16">
-                    <h1 className="text-5xl font-bold text-center mb-8">Projects:</h1>
-                    <p className="text-xl">
-                        Here's a look at what I've built so far.
-                    </p>
-                </div>
+        <main className="min-h-screen bg-black text-[#00ff41] font-mono">
 
-                {/* Project List */}
+            {/* Intro Section */}
+            <section className="max-w-3xl mx-auto px-6 py-24">
+                <p className="text-base text-[#00992a] tracking-widest uppercase mb-4">
+                    Projects
+                </p>
+                <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-tight mb-6">
+                    What I&apos;ve Built
+                </h1>
+                <p className="text-[#00ff41] text-2xl leading-snug max-w-2xl mb-6">
+                    Backend services, full-stack web apps, and software designed to last.
+                </p>
+                <p className="text-[#00b32c] text-lg leading-relaxed max-w-xl">
+                    Here&apos;s a look at what I&apos;ve built so far, from scheduled Spring Boot
+                    services backed by PostgreSQL to object-oriented game engines and AI-integrated
+                    assistants.
+                </p>
+            </section>
+
+            {/* Divider */}
+            <div className="max-w-3xl mx-auto px-6">
+                <div className="border-t border-[#003b0f]" />
+            </div>
+
+            {/* Project List */}
+            <section className="max-w-3xl mx-auto px-6 py-20">
                 <div className="flex flex-col gap-8">
-                    {projects.map((project) => (
-                        <div
+                    {projects.map((project, index) => (
+                        <article
                             key={project.title}
-                            className="bg-[#31363c] transition p-8"
+                            className="border border-[#003b0f] hover:border-[#00ff41] transition-colors duration-200 p-6 sm:p-8"
                         >
-                            {/* Project Title and Description */}
-                            <div className="flex justify-between items-start mb-4">
-                                <h2 className="text-2xl font-bold">
+                            {/* Number, Title, and GitHub Link */}
+                            <p className="text-sm text-[#00992a] tracking-widest uppercase mb-2">
+                                {String(index + 1).padStart(2, '0')}
+                            </p>
+                            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2 mb-4">
+                                <h2 className="text-3xl font-bold tracking-tight">
                                     {project.title}
                                 </h2>
-
                                 <a
                                     href={project.github}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center hover:underline">
+                                    className="shrink-0 text-base hover:underline"
+                                >
                                     View on GitHub --&gt;
                                 </a>
-
                             </div>
 
                             {/* Description */}
-                            <p className="leading-relaxed mb-6 italic">
+                            <p className="text-[#00b32c] text-lg leading-relaxed mb-6">
                                 {project.description}
                             </p>
 
                             {/* Highlights */}
-                            <ul className="mb-6 space-y-2">
-                                {project.highlights.map((highlight, index) => (
-                                    <li
-                                        key={index}
-                                        className="flex items-start gap-2"
-                                    >
-                                        {/* Custom bullet point */}
-                                        <span>
-                                            ·
-                                        </span>
+                            <ul className="space-y-3 mb-8">
+                                {project.highlights.map((highlight) => (
+                                    <li key={highlight} className="flex gap-3 text-base text-[#00b32c] leading-relaxed">
+                                        <span className="text-[#00ff41] shrink-0">&gt;</span>
                                         {highlight}
                                     </li>
                                 ))}
                             </ul>
 
                             {/* Tech Stack */}
+                            <p className="text-sm text-[#00992a] tracking-widest uppercase mb-3">
+                                Tech Stack
+                            </p>
                             <div className="flex flex-wrap gap-2">
                                 {project.techStack.map((tech) => (
                                     <span
                                         key={tech}
-                                        className="text-sm px-3 py-1 rounded transition-transform hover:scale-120"
+                                        className="px-3 py-1.5 text-base border border-[#003b0f] text-[#00b32c] hover:border-[#00ff41] hover:text-[#00ff41] transition-colors duration-150"
                                     >
                                         {tech}
                                     </span>
                                 ))}
                             </div>
-                        </div>
+                        </article>
                     ))}
-
-                    {/* GitHub Plug */}
-                    <div className="text-center mt-16">
-                        <p className="text-gray-600 mb-6">
-                            Interested in seeing more? Check out my GitHub for additional projects and contributions!
-                        </p>
-                        <a
-                            href="https://github.com/mahicks5"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="justify-center col-span-2 text-white bg-[#0f1419] hover:bg-[#0f1419]/90 focus:ring-4 rounded-lg focus:outline-none box-border border border-transparent font-medium leading-5 rounded-base text-sm px-4 py-2.5 text-center inline-flex items-center dark:hover:bg-[#24292F]">
-                            <svg className="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path fillRule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clipRule="evenodd" /></svg>
-                            mahicks5 on GitHub
-                        </a>
-                    </div>
                 </div>
+            </section>
+
+            {/* Divider */}
+            <div className="max-w-3xl mx-auto px-6">
+                <div className="border-t border-[#003b0f]" />
             </div>
+
+            {/* GitHub Section */}
+            <section className="max-w-3xl mx-auto px-6 py-20">
+                <h2 className="text-4xl font-bold tracking-tight mb-4">Want to See More?</h2>
+                <p className="text-[#00b32c] text-lg leading-relaxed max-w-xl mb-10">
+                    Check out my GitHub for additional projects and contributions, or reach out
+                    directly.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                    <a
+                        href="https://github.com/mahicks5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#00ff41] border border-[#00ff41] text-black text-base hover:bg-transparent hover:text-[#00ff41] transition-colors duration-200"
+                    >
+                        <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path fillRule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.070a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clipRule="evenodd" /></svg>
+                        mahicks5 on GitHub
+                    </a>
+                    <a
+                        href="mailto:maxwellahicks@gmail.com"
+                        className="px-5 py-2.5 border border-[#00ff41] text-[#00ff41] text-base hover:bg-[#00ff41] hover:text-black transition-colors duration-200"
+                    >
+                        Email Me
+                    </a>
+                </div>
+            </section>
+
         </main>
     );
 }
