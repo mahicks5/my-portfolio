@@ -139,9 +139,9 @@ export default function Home() {
 
       {/* Contact Section */}
       <section className="max-w-3xl mx-auto px-6 py-20">
-        <h2 className="text-4xl font-bold tracking-tight mb-4">Let's Connect</h2>
+        <h2 className="text-4xl font-bold tracking-tight mb-4">Let&apos;s Connect</h2>
         <p className="text-[#00b32c] text-lg leading-relaxed max-w-xl mb-10">
-          I'm open to full-time opportunities, collaborations, and conversations
+          I&apos;m open to full-time opportunities, collaborations, and conversations
           about software engineering. Reach out through any of the links below.
         </p>
         <div className="flex flex-wrap gap-4">
