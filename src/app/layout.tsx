@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
-import { Jersey_10 } from "next/font/google";
+import { Share_Tech_Mono } from "next/font/google";
+
 import "./globals.css";
 
-const jersey10 = Jersey_10({
+const shareTechMono = Share_Tech_Mono({
   weight: '400',
   subsets: ['latin'],
-  variable: '--font-jersey-10',
+  variable: '--font-share-tech-mono',
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://maxwellhicks.dev"),
   title: "Maxwell Hicks | Software Engineer",
   description: "Personal Webiste of Maxwell Hicks - Software Engineering Graduate",
   openGraph: {
@@ -16,12 +18,15 @@ export const metadata: Metadata = {
     description: "Full-stack projects in Java, Spring Boot, Python, and React/TypeScript.",
     images: [
       {
-        url: "https://yourdomain.com/og-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Maxwell - Software Engineer Portfolio",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 
@@ -32,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={jersey10.className}>
+      <body className={`${shareTechMono.variable} font-mono`}>
         <header className="bg-black text-[#00ff41]">
           <nav className="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="/" className="text-xl font-bold">Maxwell Hicks</a>

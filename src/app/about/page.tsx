@@ -8,10 +8,12 @@ export default function About() {
         <div className="space-y-4 leading-relaxed">
           <h2 className="text-5xl font-bold text-center">Summary:</h2>
           <p className="text-md text-left max-w-2xl mx-auto mb-8">
-            Software Engineering graduate with hands-on experience in full-stack development, object-oriented
-            programming, and algorithm implementation. Proven ability to design scalable applications using Java
-            and Python with strong foundation in data structures, RESTful API development, and software testing.
-            Seeking entry-level Software Engineer role to contribute problem-solving skills and technical expertise.
+Software Engineering graduate from Arizona State University specializing in full-stack 
+development with Java, Spring Boot, and React. Experienced building production-ready 
+applications including REST APIs, database-backed services, and interactive web interfaces. 
+Strong foundation in object-oriented design, data structures, and software testing. 
+Actively seeking an entry-level Software Engineering role to deliver clean, scalable solutions 
+to real-world problems.
           </p>
         </div>
       </section>
@@ -21,31 +23,23 @@ export default function About() {
         <div className="space-y-4 leading-relaxed">
           <h2 className="text-5xl font-bold text-center">Get To Know Me:</h2>
           <p className="text-md text-left max-w-2xl mx-auto mb-8">
-            I'm a Software Engineering graduate from Arizona State University with a passion
-            for building scalable, well-designed applications. My journey into software
-            engineering has been driven by a love for problem-solving and a curiosity about
-            how things work under the hood.
+Software Engineering graduate from Arizona State University focused on building scalable, 
+full-stack applications with clean, maintainable code. I specialize in Java, Spring Boot, 
+and React with hands-on experience across backend APIs, database design, and frontend development.
           </p>
 
           <p className="text-md text-left max-w-2xl mx-auto mb-8">
-            I specialize in full-stack development with a strong foundation in object-oriented
-            programming, data structures, and algorithms. Whether it's architecting a modular
-            game engine with design patterns or integrating multiple AI APIs to create an
-            adaptive virtual assistant, I enjoy tackling complex technical challenges and
-            turning them into clean, maintainable code.
+I've architected a modular Java game engine using OOP design patterns, built an adaptive
+virtual assistant integrating multiple AI APIs, and developed full-stack web applications 
+from the ground up. I'm drawn to complex technical challenges that require thoughtful 
+system design and attention to detail.
           </p>
 
-          <p className="text-md text-left max-w-2xl mx-auto mb-8">
-            Before transitioning into software engineering, I spent several years as a Shift
-            Supervisor at Starbucks, where I honed my leadership, communication, and
-            problem-solving skills. Managing daily operations in a fast-paced environment
-            taught me the importance of efficiency, teamwork, and staying calm under pressure.
-          </p>
-
-          <p className="text-md text-left max-w-2xl mx-auto mb-8">
-            I'm excited to bring my technical expertise and problem-solving mindset to an
-            entry-level software engineering role where I can contribute to meaningful projects
-            and continue growing as a developer.
+          <p className="text-md max-w-2xl mx-auto mb-8">
+Before transitioning into software engineering, I spent years as a Shift Supervisor at 
+Starbucks, leading teams, managing operations under pressure, and solving problems on the 
+fly. That experience shaped how I communicate, collaborate, and stay calm when things 
+get hard. It's an unconventional background for a developer, and I think that's an advantage.
           </p>
 
         </div>
@@ -60,8 +54,10 @@ export default function About() {
             <p>Software Engineering</p>
             <p>Arizona State University | Graduated August 2025</p>
             <p className="mt-2">
-              <span className="font-semibold">Relevant Coursework:</span> Data Structures &
-              Algorithms, Secure Software Systems, Web Applications
+              <span className="font-semibold">Relevant Coursework: </span>
+Data Structures & Algorithms, Operating Systems, Secure Software Systems, 
+Web Applications, Mobile Application Development, Distributed Software Systems, 
+Embedded Systems, Software Design & Construction
             </p>
           </div>
         </div>
@@ -73,15 +69,16 @@ export default function About() {
           <h2 className="text-5xl font-bold text-center">What I'm Looking For:</h2>
 
           <p className="text-md text-left max-w-2xl mx-auto mb-8">
-            I'm seeking an entry-level Software Engineer position where I can apply my technical 
-            skills to real-world problems, collaborate with experienced developers, and continue 
-            learning and growing in my career.
+I'm actively seeking an entry-level Software Engineering role where I can contribute 
+from day one. My focus is backend and full-stack development, building APIs, designing 
+scalable systems, and writing code that's built to last.
           </p>
 
           <p className="text-md text-left max-w-2xl mx-auto mb-8">
-            I'm particularly interested in opportunities that involve full-stack development, 
-            API design, or building scalable backend systems. I thrive in collaborative 
-            environments and am always eager to learn new technologies and best practices.
+I'm drawn to teams that take engineering seriously, where code is reviewed, architecture 
+is discussed, and engineers are expected to think beyond just making it work. If you're 
+building something meaningful and need a developer who shows up ready to learn and ready 
+to contribute, let's talk.
           </p>
         </div>
       </section>
