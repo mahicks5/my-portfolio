@@ -27,13 +27,16 @@ const projects = [
     },
     {
         title: "Text-Based Dungeon Crawler",
-        description: "A modular dungeon crawler game engine built in Java, utilizing Factory, Strategy, and Singleton design patterns to manage 15+ entity types and dynamic game states across 2,500+ lines of code.",
-        techStack: ["Java", "OOP", "Design Patterns", "JUnit"],
+        description: "A console-based dungeon crawler RPG built in Java with character creation, turn-based combat, a shop, and leveling, architected with Factory, Mediator, and Singleton design patterns across 15+ entity types and 2,500+ lines of code.",
+        techStack: ["Java", "OOP", "Design Patterns", "JUnit 4", "Gradle", "Checkstyle", "SpotBugs"],
         github: "https://github.com/mahicks5/console-dungeon-game",
         highlights: [
-            "Applied the Factory pattern to generate weapons, armor, names, and other game elements, reducing object creation complexity",
-            "Implemented stat upgrades with the Strategy pattern so new upgrade behaviors plug in without changing existing code",
-            "Used the Singleton pattern for management classes and a shared dice class to guarantee a single active instance",
+            "Built a turn-based combat system where minor, major, and boss enemies spawn based on dungeon depth, with health and damage scaling as players descend",
+            "Applied the Factory pattern to create weapons, armor across five equipment slots, and minor, major, and boss enemies",
+            "Routed game events through a GameManager mediator to centralize communication between game components",
+            "Implemented a Singleton dice class backed by SecureRandom to drive critical hits, misses, bonus chests, and status effects",
+            "Designed RPG progression with XP-based leveling, stat point allocation across attack, defense, stamina, and speed, and a shop for potions, antidotes, and spell tomes",
+            "Wrote a 12-test JUnit 4 suite covering factories, stats, inventory, enemies, and RNG, with Checkstyle and SpotBugs static analysis configured in the Gradle build",
         ],
     },
     {

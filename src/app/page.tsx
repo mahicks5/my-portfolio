@@ -33,7 +33,7 @@ const SKILL_GROUPS = [
 
 const HIGHLIGHTS = [
   'Built a Spring Boot service that syncs live job postings from the Greenhouse API every hour, deduplicated and persisted in PostgreSQL',
-  'Engineered a modular Java game engine using Factory, Strategy, and Singleton patterns across 15+ entity types',
+  'Engineered a modular Java game engine using Factory, Mediator, and Singleton patterns across 15+ entity types',
   'Led teams as a Starbucks Shift Supervisor, bringing ownership and composure under pressure to every project',
 ];
 
