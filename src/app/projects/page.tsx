@@ -13,6 +13,19 @@ const projects = [
         ],
     },
     {
+        title: "Tarot Card REST API",
+        description: "A RESTful Tarot card service built with Spring Boot that serves the full 78-card deck and draws single or multiple unique random cards, backed by PostgreSQL and documented with OpenAPI.",
+        techStack: ["Java 17", "Spring Boot 4.1", "Spring Data JPA", "Hibernate", "PostgreSQL", "Springdoc OpenAPI", "JUnit 5", "Mockito", "Lombok", "Maven"],
+        github: "https://github.com/mahicks5/tarot_api",
+        highlights: [
+            "Designed a layered Controller → Service → Repository architecture that separates HTTP handling, business logic, and data access for independent testability",
+            "Built endpoints to retrieve the full deck and draw 1 or n random cards, shuffling the deck so every card in a draw is unique",
+            "Validated draw requests and centralized error handling in a global exception handler, returning 400 Bad Request for invalid counts",
+            "Seeded all 78 cards into PostgreSQL on startup from a JSON dataset, skipping the load when the data already exists",
+            "Wrote unit tests with JUnit 5 and Mockito for draw logic and boundary conditions, plus MockMvc tests for HTTP responses and error handling",
+        ],
+    },
+    {
         title: "Text-Based Dungeon Crawler",
         description: "A modular dungeon crawler game engine built in Java, utilizing Factory, Strategy, and Singleton design patterns to manage 15+ entity types and dynamic game states across 2,500+ lines of code.",
         techStack: ["Java", "OOP", "Design Patterns", "JUnit"],

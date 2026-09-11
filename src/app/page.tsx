@@ -1,10 +1,11 @@
 import Link from "next/link";
 
 const LANGUAGES = ['Java', 'Python', 'TypeScript', 'JavaScript', 'SQL', 'HTML', 'CSS'];
-const BACKEND = ['Spring Boot', 'Spring Data JPA', 'Hibernate', 'Spring Scheduler', 'REST API Design', 'Flask', 'Maven'];
+const BACKEND = ['Spring Boot', 'Spring Data JPA', 'Hibernate', 'Spring Scheduler', 'REST API Design', 'Springdoc OpenAPI', 'Lombok', 'Flask', 'Maven'];
 const FRONTEND = ['React', 'Next.js', 'Tailwind CSS', 'Thymeleaf', 'Responsive Design'];
 const DATABASES = ['PostgreSQL', 'Relational Data Modeling', 'Flyway Migrations'];
-const DEVOPS_TOOLS = ['Git', 'GitHub', 'Docker', 'Linux', 'AWS', 'CI/CD', 'Vercel', 'JUnit'];
+const TESTING = ['JUnit 5', 'Mockito', 'MockMvc'];
+const DEVOPS_TOOLS = ['Git', 'GitHub', 'Docker', 'Linux', 'AWS', 'CI/CD', 'Vercel'];
 const AI_LLM_INTEGRATION = ['Claude', 'GitHub Copilot', 'LLM API Integration', 'Prompt Engineering'];
 const COMPUTER_SCIENCE = [
   'Object-Oriented Design',
@@ -23,6 +24,7 @@ const SKILL_GROUPS = [
   { label: 'Backend', items: BACKEND },
   { label: 'Frontend', items: FRONTEND },
   { label: 'Databases', items: DATABASES },
+  { label: 'Testing', items: TESTING },
   { label: 'DevOps & Tools', items: DEVOPS_TOOLS },
   { label: 'AI & LLM Integration', items: AI_LLM_INTEGRATION },
   { label: 'Computer Science', items: COMPUTER_SCIENCE },
