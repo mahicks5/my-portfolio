@@ -38,12 +38,12 @@ const projects = [
     },
     {
         title: "Adaptive Virtual Assistant",
-        description: "A web-based virtual assistant that integrates multiple AI APIs to provide personalized responses and adapt to user preferences.",
-        techStack: ["Python", "REST APIs"],
+        description: "A full-stack Flask web application built as a team project that uses Google's Gemini API to deliver personalized educational support, adapting answers to each student's age, academic level, learning style, and interests.",
+        techStack: ["Python", "Flask", "Flask-Login", "WTForms", "Jinja2", "Google Gemini API", "NLTK", "Bootstrap", "Bleach", "Markdown"],
         github: "https://github.com/mahicks5/group21_adaptivevirtualassistant",
         highlights: [
-            "Implemented a RESTful API using Flask, allowing users to perform CRUD operations on a database",
-            "Designed and optimized database schema for efficient data retrieval and storage",
+            "Integrated Google's Gemini API to generate answers tailored to each learner's profile, including academic level, learning style, and personal interests",
+            "Built a comprehension scoring service that evaluates user understanding and adjusts response-style weights to adapt future answers",
         ],
     },
     {
