@@ -81,6 +81,14 @@ export default function Home() {
             View My Work
           </Link>
           <a
+            href="/Maxwell_Hicks_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2.5 border border-[#00ff41] text-[#00ff41] text-base hover:bg-[#00ff41] hover:text-black transition-colors duration-200"
+          >
+            Resume
+          </a>
+          <a
             href="mailto:maxwellahicks@gmail.com"
             className="px-5 py-2.5 border border-[#00ff41] text-[#00ff41] text-base hover:bg-[#00ff41] hover:text-black transition-colors duration-200"
           >
@@ -147,6 +155,14 @@ export default function Home() {
           about software engineering. Reach out through any of the links below.
         </p>
         <div className="flex flex-wrap gap-4">
+          <a
+            href="/Maxwell_Hicks_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2.5 border border-[#00ff41] text-[#00ff41] text-base hover:bg-[#00ff41] hover:text-black transition-colors duration-200"
+          >
+            Resume
+          </a>
           <a
             href="mailto:maxwellahicks@gmail.com"
             className="px-5 py-2.5 border border-[#00ff41] text-[#00ff41] text-base hover:bg-[#00ff41] hover:text-black transition-colors duration-200"
