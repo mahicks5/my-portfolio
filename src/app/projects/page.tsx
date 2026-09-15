@@ -1,3 +1,15 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects | Maxwell Hicks",
+  description: "Backend services and full-stack applications in Java, Spring Boot, PostgreSQL, and React, including a job board monitor, a Tarot REST API, and a Java dungeon crawler.",
+  openGraph: {
+    title: "Projects | Maxwell Hicks",
+    description: "Backend services and full-stack applications in Java, Spring Boot, PostgreSQL, and React.",
+    images: ["/og-image.png"],
+  },
+};
+
 const projects = [
     {
         title: "Job Board Monitor",

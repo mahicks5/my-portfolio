@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 const COURSEWORK = [
@@ -10,6 +11,16 @@ const COURSEWORK = [
   'Mobile Application Development',
   'Embedded Systems',
 ];
+
+export const metadata: Metadata = {
+  title: "About | Maxwell Hicks",
+  description: "Software Engineering graduate from Arizona State University building backend services and full-stack applications with Java, Spring Boot, and React.",
+  openGraph: {
+    title: "About | Maxwell Hicks",
+    description: "Background, education, and what I am looking for in a software engineering role.",
+    images: ["/og-image.png"],
+  },
+};
 
 export default function About() {
   return (
