@@ -68,7 +68,7 @@ const projects = [
         github: "https://github.com/mahicks5/my-portfolio",
         highlights: [
             "Implemented a responsive design using Tailwind CSS, ensuring optimal viewing across devices",
-            "Optimized performance by leveraging Next.js features such as server-side rendering and image optimization",
+            "Optimized performance with statically prerendered pages, next/font for font loading, and client-side navigation with next/link",
             "Deployed the website on Vercel, enabling seamless updates and continuous deployment",
         ],
     },

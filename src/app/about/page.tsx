@@ -106,7 +106,7 @@ export default function About() {
         <h2 className="text-4xl font-bold tracking-tight mb-8">What I Build</h2>
         <p className="text-[#00b32c] text-lg leading-relaxed max-w-2xl mb-4">
           I&apos;ve architected a modular Java game engine using OOP design patterns, built an
-          adaptive virtual assistant integrating multiple AI APIs, and developed full-stack web
+          adaptive virtual assistant powered by Google&apos;s Gemini API, and developed full-stack web
           applications from the ground up.
         </p>
         <p className="text-[#00b32c] text-lg leading-relaxed max-w-2xl">
