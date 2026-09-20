@@ -40,11 +40,12 @@ export default function RootLayout({
     <html lang="en" className={shareTechMono.variable}>
       <body className="font-mono">
         <header className="bg-black text-[#00ff41]">
-          <nav className="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+          <nav className="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-y-2">
             <Link href="/" className="text-xl font-bold">Maxwell Hicks</Link>
-            <div className="flex gap-6">
+            <div className="flex flex-wrap gap-x-6 gap-y-2">
               <Link href="/projects" className="hover:text-white transition-transform hover:scale-120">Projects</Link>
               <Link href="/about" className="hover:text-white transition-transform hover:scale-120">About</Link>
+              <a href="/Maxwell_Hicks_Resume.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-transform hover:scale-120">Resume</a>
               <a href="mailto:maxwellahicks@gmail.com" className="hover:text-white transition-transform hover:scale-120">Contact</a>
             </div>
           </nav>
