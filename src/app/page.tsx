@@ -39,27 +39,27 @@ const HIGHLIGHTS = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-[#00ff41] font-mono">
+    <main className="min-h-screen bg-black text-foreground font-mono">
 
       {/* Hero Section */}
       <section className="max-w-3xl mx-auto px-6 py-24">
-        <div className="inline-flex items-center gap-3 px-3 py-1 mb-8 border border-[#003b0f] text-sm text-[#00b32c]">
+        <div className="inline-flex items-center gap-3 px-3 py-1 mb-8 border border-border text-sm text-foreground-secondary">
           <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full rounded-full bg-[#00ff41] opacity-75 animate-ping" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-[#00ff41]" />
+            <span className="absolute inline-flex h-full w-full rounded-full bg-foreground opacity-75 animate-ping" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-foreground" />
           </span>
           Open to full-time Software Engineering roles
         </div>
-        <p className="text-base text-[#00992a] tracking-widest uppercase mb-4">
+        <p className="text-base text-foreground-muted tracking-widest uppercase mb-4">
           Software Engineer · Backend &amp; Full-Stack
         </p>
         <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-tight mb-6">
           Maxwell Hicks
         </h1>
-        <p className="text-[#00ff41] text-2xl leading-snug max-w-2xl mb-6">
+        <p className="text-foreground text-2xl leading-snug max-w-2xl mb-6">
           I build reliable backend systems and the APIs that power them.
         </p>
-        <p className="text-[#00b32c] text-lg leading-relaxed max-w-xl mb-10">
+        <p className="text-foreground-secondary text-lg leading-relaxed max-w-xl mb-10">
           Software Engineering graduate from Arizona State University. I design and ship
           full-stack applications with Java, Spring Boot, PostgreSQL, and React, from the
           data model and scheduled services to the interface on top, with clean,
@@ -67,8 +67,8 @@ export default function Home() {
         </p>
         <ul className="space-y-3 max-w-2xl mb-12">
           {HIGHLIGHTS.map((highlight) => (
-            <li key={highlight} className="flex gap-3 text-base text-[#00b32c] leading-relaxed">
-              <span className="text-[#00ff41] shrink-0">&gt;</span>
+            <li key={highlight} className="flex gap-3 text-base text-foreground-secondary leading-relaxed">
+              <span className="text-foreground shrink-0">&gt;</span>
               {highlight}
             </li>
           ))}
@@ -76,7 +76,7 @@ export default function Home() {
         <div className="flex flex-wrap gap-4">
           <Link
             href="/projects"
-            className="px-5 py-2.5 bg-[#00ff41] border border-[#00ff41] text-black text-base hover:bg-transparent hover:text-[#00ff41] transition-colors duration-200"
+            className="px-5 py-2.5 bg-foreground border border-foreground text-black text-base hover:bg-transparent hover:text-foreground transition-colors duration-200"
           >
             View My Work
           </Link>
@@ -84,13 +84,13 @@ export default function Home() {
             href="/Maxwell_Hicks_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 border border-[#00ff41] text-[#00ff41] text-base hover:bg-[#00ff41] hover:text-black transition-colors duration-200"
+            className="px-5 py-2.5 border border-foreground text-foreground text-base hover:bg-foreground hover:text-black transition-colors duration-200"
           >
             Resume
           </a>
           <a
             href="mailto:maxwellahicks@gmail.com"
-            className="px-5 py-2.5 border border-[#00ff41] text-[#00ff41] text-base hover:bg-[#00ff41] hover:text-black transition-colors duration-200"
+            className="px-5 py-2.5 border border-foreground text-foreground text-base hover:bg-foreground hover:text-black transition-colors duration-200"
           >
             Email Me
           </a>
@@ -98,7 +98,7 @@ export default function Home() {
             href="https://github.com/mahicks5"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 border border-[#00b32c] text-[#00b32c] text-base hover:bg-[#00b32c] hover:text-black transition-colors duration-200"
+            className="px-5 py-2.5 border border-foreground-secondary text-foreground-secondary text-base hover:bg-foreground-secondary hover:text-black transition-colors duration-200"
           >
             GitHub
           </a>
@@ -106,7 +106,7 @@ export default function Home() {
             href="https://www.linkedin.com/in/maxwell-h-2647622a4"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 border border-[#00b32c] text-[#00b32c] text-base hover:bg-[#00b32c] hover:text-black transition-colors duration-200"
+            className="px-5 py-2.5 border border-foreground-secondary text-foreground-secondary text-base hover:bg-foreground-secondary hover:text-black transition-colors duration-200"
           >
             LinkedIn
           </a>
@@ -115,7 +115,7 @@ export default function Home() {
 
       {/* Divider */}
       <div className="max-w-3xl mx-auto px-6">
-        <div className="border-t border-[#003b0f]" />
+        <div className="border-t border-border" />
       </div>
 
       {/* Skills Section */}
@@ -124,14 +124,14 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-10">
           {SKILL_GROUPS.map(({ label, items }) => (
             <div key={label}>
-              <p className="text-sm text-[#00992a] tracking-widest uppercase mb-3">
+              <p className="text-sm text-foreground-muted tracking-widest uppercase mb-3">
                 {label}
               </p>
               <div className="flex flex-wrap gap-2">
                 {items.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1.5 text-base border border-[#003b0f] text-[#00b32c] hover:border-[#00ff41] hover:text-[#00ff41] transition-colors duration-150"
+                    className="px-3 py-1.5 text-base border border-border text-foreground-secondary hover:border-foreground hover:text-foreground transition-colors duration-150"
                   >
                     {skill}
                   </span>
@@ -144,13 +144,13 @@ export default function Home() {
 
       {/* Divider */}
       <div className="max-w-3xl mx-auto px-6">
-        <div className="border-t border-[#003b0f]" />
+        <div className="border-t border-border" />
       </div>
 
       {/* Contact Section */}
       <section className="max-w-3xl mx-auto px-6 py-20">
         <h2 className="text-4xl font-bold tracking-tight mb-4">Let&apos;s Connect</h2>
-        <p className="text-[#00b32c] text-lg leading-relaxed max-w-xl mb-10">
+        <p className="text-foreground-secondary text-lg leading-relaxed max-w-xl mb-10">
           I&apos;m open to full-time opportunities, collaborations, and conversations
           about software engineering. Reach out through any of the links below.
         </p>
@@ -159,13 +159,13 @@ export default function Home() {
             href="/Maxwell_Hicks_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 border border-[#00ff41] text-[#00ff41] text-base hover:bg-[#00ff41] hover:text-black transition-colors duration-200"
+            className="px-5 py-2.5 border border-foreground text-foreground text-base hover:bg-foreground hover:text-black transition-colors duration-200"
           >
             Resume
           </a>
           <a
             href="mailto:maxwellahicks@gmail.com"
-            className="px-5 py-2.5 border border-[#00ff41] text-[#00ff41] text-base hover:bg-[#00ff41] hover:text-black transition-colors duration-200"
+            className="px-5 py-2.5 border border-foreground text-foreground text-base hover:bg-foreground hover:text-black transition-colors duration-200"
           >
             Email Me
           </a>
@@ -173,7 +173,7 @@ export default function Home() {
             href="https://github.com/mahicks5"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 border border-[#00b32c] text-[#00b32c] text-base hover:bg-[#00b32c] hover:text-black transition-colors duration-200"
+            className="px-5 py-2.5 border border-foreground-secondary text-foreground-secondary text-base hover:bg-foreground-secondary hover:text-black transition-colors duration-200"
           >
             GitHub
           </a>
@@ -181,7 +181,7 @@ export default function Home() {
             href="https://www.linkedin.com/in/maxwell-h-2647622a4"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 border border-[#00b32c] text-[#00b32c] text-base hover:bg-[#00b32c] hover:text-black transition-colors duration-200"
+            className="px-5 py-2.5 border border-foreground-secondary text-foreground-secondary text-base hover:bg-foreground-secondary hover:text-black transition-colors duration-200"
           >
             LinkedIn
           </a>

@@ -76,20 +76,20 @@ const projects = [
 
 export default function Projects() {
     return (
-        <main className="min-h-screen bg-black text-[#00ff41] font-mono">
+        <main className="min-h-screen bg-black text-foreground font-mono">
 
             {/* Intro Section */}
             <section className="max-w-3xl mx-auto px-6 py-24">
-                <p className="text-base text-[#00992a] tracking-widest uppercase mb-4">
+                <p className="text-base text-foreground-muted tracking-widest uppercase mb-4">
                     Projects
                 </p>
                 <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-tight mb-6">
                     What I&apos;ve Built
                 </h1>
-                <p className="text-[#00ff41] text-2xl leading-snug max-w-2xl mb-6">
+                <p className="text-foreground text-2xl leading-snug max-w-2xl mb-6">
                     Backend services, full-stack web apps, and software designed to last.
                 </p>
-                <p className="text-[#00b32c] text-lg leading-relaxed max-w-xl">
+                <p className="text-foreground-secondary text-lg leading-relaxed max-w-xl">
                     Here&apos;s a look at what I&apos;ve built so far, from scheduled Spring Boot
                     services backed by PostgreSQL to object-oriented game engines and AI-integrated
                     assistants.
@@ -98,7 +98,7 @@ export default function Projects() {
 
             {/* Divider */}
             <div className="max-w-3xl mx-auto px-6">
-                <div className="border-t border-[#003b0f]" />
+                <div className="border-t border-border" />
             </div>
 
             {/* Project List */}
@@ -107,10 +107,10 @@ export default function Projects() {
                     {projects.map((project, index) => (
                         <article
                             key={project.title}
-                            className="border border-[#003b0f] hover:border-[#00ff41] transition-colors duration-200 p-6 sm:p-8"
+                            className="border border-border hover:border-foreground transition-colors duration-200 p-6 sm:p-8"
                         >
                             {/* Number, Title, and GitHub Link */}
-                            <p className="text-sm text-[#00992a] tracking-widest uppercase mb-2">
+                            <p className="text-sm text-foreground-muted tracking-widest uppercase mb-2">
                                 {String(index + 1).padStart(2, '0')}
                             </p>
                             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2 mb-4">
@@ -128,29 +128,29 @@ export default function Projects() {
                             </div>
 
                             {/* Description */}
-                            <p className="text-[#00b32c] text-lg leading-relaxed mb-6">
+                            <p className="text-foreground-secondary text-lg leading-relaxed mb-6">
                                 {project.description}
                             </p>
 
                             {/* Highlights */}
                             <ul className="space-y-3 mb-8">
                                 {project.highlights.map((highlight) => (
-                                    <li key={highlight} className="flex gap-3 text-base text-[#00b32c] leading-relaxed">
-                                        <span className="text-[#00ff41] shrink-0">&gt;</span>
+                                    <li key={highlight} className="flex gap-3 text-base text-foreground-secondary leading-relaxed">
+                                        <span className="text-foreground shrink-0">&gt;</span>
                                         {highlight}
                                     </li>
                                 ))}
                             </ul>
 
                             {/* Tech Stack */}
-                            <p className="text-sm text-[#00992a] tracking-widest uppercase mb-3">
+                            <p className="text-sm text-foreground-muted tracking-widest uppercase mb-3">
                                 Tech Stack
                             </p>
                             <div className="flex flex-wrap gap-2">
                                 {project.techStack.map((tech) => (
                                     <span
                                         key={tech}
-                                        className="px-3 py-1.5 text-base border border-[#003b0f] text-[#00b32c] hover:border-[#00ff41] hover:text-[#00ff41] transition-colors duration-150"
+                                        className="px-3 py-1.5 text-base border border-border text-foreground-secondary hover:border-foreground hover:text-foreground transition-colors duration-150"
                                     >
                                         {tech}
                                     </span>
@@ -163,13 +163,13 @@ export default function Projects() {
 
             {/* Divider */}
             <div className="max-w-3xl mx-auto px-6">
-                <div className="border-t border-[#003b0f]" />
+                <div className="border-t border-border" />
             </div>
 
             {/* GitHub Section */}
             <section className="max-w-3xl mx-auto px-6 py-20">
                 <h2 className="text-4xl font-bold tracking-tight mb-4">Want to See More?</h2>
-                <p className="text-[#00b32c] text-lg leading-relaxed max-w-xl mb-10">
+                <p className="text-foreground-secondary text-lg leading-relaxed max-w-xl mb-10">
                     Check out my GitHub for additional projects and contributions, or reach out
                     directly.
                 </p>
@@ -178,14 +178,14 @@ export default function Projects() {
                         href="https://github.com/mahicks5"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#00ff41] border border-[#00ff41] text-black text-base hover:bg-transparent hover:text-[#00ff41] transition-colors duration-200"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-foreground border border-foreground text-black text-base hover:bg-transparent hover:text-foreground transition-colors duration-200"
                     >
                         <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path fillRule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.070a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clipRule="evenodd" /></svg>
                         mahicks5 on GitHub
                     </a>
                     <a
                         href="mailto:maxwellahicks@gmail.com"
-                        className="px-5 py-2.5 border border-[#00ff41] text-[#00ff41] text-base hover:bg-[#00ff41] hover:text-black transition-colors duration-200"
+                        className="px-5 py-2.5 border border-foreground text-foreground text-base hover:bg-foreground hover:text-black transition-colors duration-200"
                     >
                         Email Me
                     </a>

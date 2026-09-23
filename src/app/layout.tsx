@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={shareTechMono.variable}>
       <body className="font-mono">
-        <header className="bg-black text-[#00ff41]">
+        <header className="bg-black text-foreground">
           <nav className="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-y-2">
             <Link href="/" className="text-xl font-bold">Maxwell Hicks</Link>
             <div className="flex flex-wrap gap-x-6 gap-y-2">

@@ -55,7 +55,7 @@
   }
 
   ::selection {
-    background: #00ff41;
+    background: var(--foreground);
     color: #000000;
   }
 
