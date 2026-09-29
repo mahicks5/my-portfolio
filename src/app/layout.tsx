@@ -51,6 +51,45 @@ export default function RootLayout({
           </nav>
         </header>
         {children}
+        <footer className="border-t border-border">
+          <div className="max-w-4xl mx-auto px-6 py-8 flex flex-wrap justify-between items-center gap-x-6 gap-y-4 text-sm">
+            <p className="text-foreground-muted">
+              &copy; {new Date().getFullYear()} Maxwell Hicks
+            </p>
+            <div className="flex flex-wrap gap-x-6 gap-y-2">
+              <a
+                href="https://github.com/mahicks5"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground-muted hover:text-foreground transition-colors"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/maxwell-h-2647622a4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground-muted hover:text-foreground transition-colors"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="mailto:maxwellahicks@gmail.com"
+                className="text-foreground-muted hover:text-foreground transition-colors"
+              >
+                Email
+              </a>
+              <a
+                href="/Maxwell_Hicks_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground-muted hover:text-foreground transition-colors"
+              >
+                Resume
+              </a>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );
