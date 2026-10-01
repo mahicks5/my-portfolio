@@ -14,7 +14,7 @@ const projects = [
     {
         title: "Job Board Monitor",
         description: "A full-stack web application that automatically tracks and aggregates job postings from target companies. Polls the Greenhouse ATS API every hour, persists new postings to a PostgreSQL database, and displays them through a clean web interface, only surfacing roles that haven't been seen before.",
-        techStack: ["Java", "Spring Boot 3.5", "Spring Data JPA", "Spring Scheduler", "PostgreSQL", "Flyway", "Thymeleaf", "Maven"],
+        techStack: ["Java", "Spring Boot 3.5", "Spring Data JPA", "Spring Scheduler", "PostgreSQL", "Flyway", "Docker", "Thymeleaf", "Maven"],
         github: "https://github.com/mahicks5/job-monitor",
         highlights: [
             "Built a full-stack job monitoring application in Java and Spring Boot that automatically aggregates live postings from target companies via the Greenhouse ATS API",
